@@ -12,45 +12,45 @@
 
     <div class="container">
 
-      <h2>Weather Forecast: <span class="small">Orlando</span></h2>
-      <table class="table table table-hover">
-        <thead>
-          <tr class="head">
-            <th scope="col" class="head-date">Date</th>
-            <th scope="col" class="head-temp-low">Low</th>
-            <th scope="col" class="head-temp-high">High</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="day">
-            <th scope="row" class="day-date">03/30/2017</th>
-            <td class="day-low"><span class="temp">87</span>&deg; <span class="notation">F</span></td>
-            <td class="day-high"><span class="temp">68</span>&deg; <span class="notation">F</span></td>
-          </tr>
-          <tr class="day">
-            <th scope="row" class="day-date">04/01/2017</th>
-            <td class="day-low"><span class="temp">64</span>&deg; <span class="notation">F</span></td>
-            <td class="day-high"><span class="temp">85</span>&deg; <span class="notation">F</span></td>
-          </tr>
-          <tr class="day">
-            <th scope="row"class="day-date">04/02/2017</th>
-            <td class="day-low"><span class="temp">65</span>&deg; <span class="notation">F</span></td>
-            <td class="day-high"><span class="temp">89</span>&deg; <span class="notation">F</span></td>
-          </tr>
-          <tr class="day">
-            <th scope="row"class="day-date">04/03/2017</th>
-            <td class="day-low"><span class="temp">69</span>&deg; <span class="notation">F</span></td>
-            <td class="day-high"><span class="temp">90</span>&deg; <span class="notation">F</span></td>
-          </tr>
-          <tr class="day">
-            <th scope="row"class="day-date">04/04/2017</th>
-            <td class="day-low"><span class="temp">65</span>&deg; <span class="notation">F</span></td>
-            <td class="day-high"><span class="temp">88</span>&deg; <span class="notation">F</span></td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>SVG Graphics</h2>
 
-      <div id="viz"></div>
+      <div id="viz">
+
+        <svg width="600" height="400" 
+          style="background: #93A1A1">
+
+          <line x1="0" y1="200" x2="600" y2="300"
+            style="stroke: #268BD2; stroke-width: 40px" />
+
+          <rect 
+            x="200" y="100"
+            width="200" height="200"
+            style="fill: #CB4B19;"
+            />
+          
+          <circle 
+            cx="300" cy="200" r="50"
+            style="fill: #840043"
+          />
+
+          <text 
+            x="10" y="390"
+            font-family="sans-serif"
+            font-size="25"
+            fill="white">Hello SVG</text>
+
+          <g id="triangle">
+            <polyline 
+              points="10 35, 30 10, 50 35"
+              style="fill: #F7B330"
+            />
+          </g>
+
+          <use xlink:href="#triangle" x="30" y="0" />
+
+        </svg>
+
+      </div>
 
     </div><!-- container -->
     <script src="js/libraries/jquery/jquery.min.js"></script>
